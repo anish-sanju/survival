@@ -1,0 +1,32 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/RoundCard.astro';
+import Header from '../components/Header.astro';
+---
+
+<Layout title="Rounds 👀">
+<main></main>
+
+<div id="blur"></div>	
+
+<!-- <Header/> -->
+<br><br><br><br>
+<Header/>
+<div class="card-container" style="display: flex; justify-content: center; align-items: center;">
+    
+	<Card 
+    title="ROUND 1"
+    href="https://img.freepik.com/premium-vector/futuristic-glow-low-poly-jigsaw-puzzle-pieces-abstract-background-with-space-text-dark-blue_67515-494.jpg?w=996"
+    round_name="PUZZLE MASTER"/>
+    <Card 
+    title="ROUND 2"
+    href="https://img.freepik.com/free-photo/turned-gray-laptop-computer_400718-47.jpg?w=1060&t=st=1678446430~exp=1678447030~hmac=feb37fa707928508f936695d1cb1a1721361bc02ef47d8758235c77404738b1f"
+    round_name="BATTLE OF THE SNIPPETS"/>
+    <Card 
+    title="ROUND 3"
+    href="https://img.freepik.com/free-vector/stream-binary-code-design-vector_53876-161367.jpg?w=360&t=st=1678446307~exp=1678446907~hmac=e5597cd6beb948fcaf2a285ae39e1ea0d090d93e5aba58dc9cf8374261bad9d1"
+    round_name="THE FINAL SHOWDOWN"/>
+</div>
+
+<div id="blob"></div>
+</Layout>
