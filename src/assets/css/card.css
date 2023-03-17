@@ -365,7 +365,9 @@ button:focus+.design-container {
     color: rgb(255, 255, 255);
     background: #111;
     cursor: pointer;
-     /* Center horizontally */
+    position: absolute;
+    top: 45%;
+    right: 50%;
     z-index: 99;
     border-radius: 10px;
     width: 100px;
