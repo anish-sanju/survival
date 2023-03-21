@@ -6,14 +6,12 @@ import Header from '../components/Header.astro';
 
 <Layout title="Rounds 👀">
 <main></main>
-
+<Header/>
 <div id="blur"></div>	
 
 <!-- <Header/> -->
-<br><br>
 
-<div class="card-container" style="display: flex; justify-content: center; align-items: center;">
-    
+<div class="card-container">
 	<Card 
     title="ROUND 1"
     href="https://img.freepik.com/premium-vector/futuristic-glow-low-poly-jigsaw-puzzle-pieces-abstract-background-with-space-text-dark-blue_67515-494.jpg?w=996"
@@ -30,3 +28,35 @@ import Header from '../components/Header.astro';
 
 <div id="blob"></div>
 </Layout>
+
+<style>
+    .card-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    @media (max-width: 640px) {
+        .card-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+
+        body {
+            overflow: auto;
+            background-image: url('../Screenshot 2023-03-20 194058.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+        #blob {
+            display: none;
+        }
+        #blur {
+            display: none;
+        }
+    }
+
+</style>
