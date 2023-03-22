@@ -35,7 +35,7 @@ import Layout from "../layouts/Layout.astro";
           Round 1
         </a>
       </div>
-    </section>
+    </div>
   </div>
   <style>
     @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap");
@@ -76,7 +76,6 @@ import Layout from "../layouts/Layout.astro";
     section *::after {
       position: absolute;
       box-sizing: border-box;
-      pointer-events: none;
     }
 
     @keyframes walkin {
@@ -323,8 +322,8 @@ import Layout from "../layouts/Layout.astro";
       animation: pop 0.5s 5.5s cubic-bezier(0.175, 0.885, 0.32, 1.5) forwards,
         pop 0.25s 8.5s linear reverse forwards;
       --b: #25b749;
-      padding: 4vmin 2.5vmin 4vmin 4vmin;
-      font-size: 2.25vmin;
+      padding: 4%;
+      font-size: 2rem;
       background: var(--b);
       color: #fff;
       border-radius: 2vmin;
@@ -429,6 +428,24 @@ import Layout from "../layouts/Layout.astro";
       text-align: left;
       font-size: xx-large;
       color: #0000;
+    }
+
+    a {
+      animation: showlinktext 60s 44s linear forwards;
+      padding-left: 1%;
+      font-size: xx-large;
+      color: #0000;
+    }
+    
+    @keyframes showlinktext {
+      0%,
+      100% {
+        color: #0000;
+      }
+      10%,
+      90% {
+        color: #0000ff;
+      }
     }
 
     .round::before {
