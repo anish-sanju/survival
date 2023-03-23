@@ -8,6 +8,7 @@ import Layout from "../layouts/Layout.astro";
     aria-label="Animated cartoon: Death (a cloaked skeleton with a scythe) receives a text message from JavaScript saying 'CSS is dead!' Disappointed, Death sighs: That guy is so annoying... Maybe it's time I take anohter of its frameworks away..."
   >
     <section>
+      <img src="../image1.png" alt="logo"/>
       <div class="ring"></div>
       <div class="phone"></div>
       <div class="death">
@@ -21,25 +22,26 @@ import Layout from "../layouts/Layout.astro";
         <span>Are you able to survive?</span>
       </div>
       <div class="sigh">Do you have what it takes to survive?</div>
-      <div class="rules">
+      <!--><div class="rules">
         GENERAL RULES<br />
         ● Team Size: 2 members<br />
         ● No mobile phones allowed<br />
         ● Coordinators' decision shall be final<br />
-        ● Each team must have a Quizizz and HackerRank account<br />
+        ● Each team must have a Quizizz and &nbsp;HackerRank account<br />
         ● All the rounds are elimination based<br />
         ● Total allotted time: 3 hours<br />
-      </div>
+      </div>-->
       <div class="round">
         Here is the link to <a href="https://quizizz.com/join?gc=10000000">
           Round 1
         </a>
       </div>
+    </section>
     </div>
-  </div>
   <style>
     @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap");
-
+    @import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
     html,
     body {
       background: #111;
@@ -63,11 +65,62 @@ import Layout from "../layouts/Layout.astro";
       translate: -50% -50%;
     }
 
+    /*h1 {
+      font-family: 'Creepster', cursive;
+      text-align: center;
+      margin-top: 0%;
+      width: 100%;
+      letter-spacing: 10px;
+      font-size: 8rem;
+      color: purple;
+    }*/
+
+    /*h1 {
+    color:rgb(255, 0, 0);
+    font-family: 'Poppins', sans-serif;
+    font-size: 8rem;
+    margin-top: 0%;
+    text-align: center;
+    width: 100%;
+    color: #fff;
+    background-image: linear-gradient(
+    -225deg,
+    #231557 0%,
+    #44107a 29%,
+    #ff1361 67%,
+    #fff800 100%
+);
+    background-size: auto auto;
+    background-clip: border-box;
+    background-size: 200% auto;
+    color: #fff;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textclip 2s linear infinite;
+    display: inline-block;
+}
+
+  @keyframes textclip {
+    to {
+      background-position: 200% center;
+    }
+  }
+*/
+    img {
+      margin-left:33%;
+      margin-top: 2%;
+      transform: scale(1.1);
+    }
+
     section {
       position: relative;
       width: 100%;
       height: 100%;
-      background: linear-gradient(#c9c9, #c9c0), #fff;
+      background: url("https://img.freepik.com/free-vector/watercolor-halloween-background_52683-43697.jpg");
+      background: url("https://img.freepik.com/premium-vector/spooky-night-graveyard-with-pumpkins-house-happy-halloween_3589-1109.jpg?w=826");
+      background-repeat: no-repeat;
+      background-size: cover;
       overflow: hidden;
     }
 
@@ -326,6 +379,7 @@ import Layout from "../layouts/Layout.astro";
       font-size: 2rem;
       background: var(--b);
       color: #fff;
+      border: 1px solid #000;
       border-radius: 2vmin;
       top: 30%;
       left: 60%;
@@ -356,6 +410,18 @@ import Layout from "../layouts/Layout.astro";
     }
 
     @keyframes showsightext {
+      0%,
+      100% {
+        color: #0000;
+      }
+      10%,
+      90% {
+        color: #000;
+        padding: 1%;
+      }
+    }
+    
+    @keyframes showruletext {
       0%,
       100% {
         color: #0000;
@@ -399,7 +465,7 @@ import Layout from "../layouts/Layout.astro";
     }
 
     .rules {
-      animation: showsightext 20s 21s linear forwards;
+      animation: showruletext 15s 21s linear forwards;
       font-size: 2vmin;
       width: 40%;
       left: 57%;
@@ -431,7 +497,7 @@ import Layout from "../layouts/Layout.astro";
     }
 
     a {
-      animation: showlinktext 60s 44s linear forwards;
+      animation: showlinktext 60s 41s linear forwards;
       padding-left: 1%;
       font-size: xx-large;
       color: #0000;
@@ -449,7 +515,7 @@ import Layout from "../layouts/Layout.astro";
     }
 
     .round::before {
-      animation: showsigh 3s 41s linear forwards;
+      animation: showsigh 3s 36s linear forwards;
       content: "...So lets get started...";
       top: 0;
       left: 0;
