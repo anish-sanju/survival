@@ -24,13 +24,13 @@ import image from "/image1.png"
       </div>
       <div class="sigh">Do you have what it takes to survive?</div>
       <div class="rules">
-        GENERAL RULES<br />
-        ● Team Size: 2 members<br />
-        ● No mobile phones allowed<br />
-        ● Coordinators' decision shall be final<br />
-        ● Each team must have a Quizizz and &nbsp;HackerRank account<br />
-        ● All the rounds are elimination based<br />
-        ● Total allotted time: 3 hours<br />
+        <span>GENERAL RULES</span><br /><br />
+        &nbsp;&nbsp;● Team Size: 2 members<br />
+        &nbsp;&nbsp;● No mobile phones allowed<br />
+        &nbsp;&nbsp;● Coordinators' decision shall be final<br />
+        &nbsp;&nbsp;● Each team must have a Quizizz and &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HackerRank account<br />
+        &nbsp;&nbsp;● All the rounds are elimination based<br />
+        &nbsp;&nbsp;● Total allotted time: 3 hours<br />
       </div>
       <div class="round">
         Here is the link to <a href="https://quizizz.com/join?gc=10000000">
@@ -52,7 +52,7 @@ import image from "/image1.png"
       height: 100%;
     }
     div[role="img"] {
-      --cape: #000;
+      --cape: #000000;
       --bone: #ffc;
       display: flex;
       flex-direction: column;
@@ -66,52 +66,15 @@ import image from "/image1.png"
       translate: -50% -50%;
     }
 
-    /*h1 {
-      font-family: 'Creepster', cursive;
-      text-align: center;
-      margin-top: 0%;
-      width: 100%;
-      letter-spacing: 10px;
-      font-size: 8rem;
-      color: purple;
-    }*/
-
-    /*h1 {
-    color:rgb(255, 0, 0);
-    font-family: 'Poppins', sans-serif;
-    font-size: 8rem;
-    margin-top: 0%;
-    text-align: center;
-    width: 100%;
-    color: #fff;
-    background-image: linear-gradient(
-    -225deg,
-    #231557 0%,
-    #44107a 29%,
-    #ff1361 67%,
-    #fff800 100%
-);
-    background-size: auto auto;
-    background-clip: border-box;
-    background-size: 200% auto;
-    color: #fff;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: textclip 2s linear infinite;
-    display: inline-block;
-}
-
-  @keyframes textclip {
-    to {
-      background-position: 200% center;
-    }
-  }
-*/
     img {
-      margin-left:33%;
+      margin-left:34%;
       margin-top: 2%;
       transform: scale(1.1);
+      -webkit-touch-callout:none;
+      -webkit-user-select:none;
+      -moz-user-select:none;
+      -ms-user-select:none;
+      user-select:none;
     }
 
     section {
@@ -120,9 +83,12 @@ import image from "/image1.png"
       height: 100%;
       background: url("https://img.freepik.com/free-vector/watercolor-halloween-background_52683-43697.jpg");
       background: url("https://img.freepik.com/premium-vector/spooky-night-graveyard-with-pumpkins-house-happy-halloween_3589-1109.jpg?w=826");
+      background-image: url('/4140526.jpg');
       background-repeat: no-repeat;
       background-size: cover;
       overflow: hidden;
+      opacity: 0.9;
+      box-shadow: 0 0 200px rgba(0,0,0,1) inset;
     }
 
     section *,
@@ -130,6 +96,16 @@ import image from "/image1.png"
     section *::after {
       position: absolute;
       box-sizing: border-box;
+    }
+
+    section::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0,0.05);
     }
 
     @keyframes walkin {
@@ -147,15 +123,14 @@ import image from "/image1.png"
         scale: 1 1;
       }
       50% {
-        scale: 1 1;
+        scale: 1 1.025;
       }
     }
 
     .death {
       transform-origin: 50% 100%;
       animation: walkin 3s ease-out forwards,
-        shouldersmove 0.75s 4 ease-out forwards,
-        shouldersmove 0.75s 5 16s ease-out forwards;
+        shouldersmove 0.75s 4 ease-out forwards;
       width: 45%;
       height: 75%;
       bottom: 0;
@@ -180,8 +155,8 @@ import image from "/image1.png"
       30%,
       40% {
         width: 15%;
-        height: 8%;
-        transform: rotate(20deg);
+        height: 9%;
+        transform: rotate(0);
       }
       42% {
         width: 15%;
@@ -190,7 +165,7 @@ import image from "/image1.png"
       }
       46% {
         width: 30%;
-        height: 7%;
+        height: 14%;
       }
       48% {
         transform: rotate(0);
@@ -227,14 +202,13 @@ import image from "/image1.png"
         rotate: 0;
       }
       100% {
-        rotate: 0deg;
+        rotate: -5deg;
       }
     }
 
     .death::after {
       transform-origin: 50% 0;
-      animation: movescythe 0.75s 4 ease-in alternate forwards,
-        movescythe 0.75s 16s 5 ease-in alternate forwards;
+      animation: movescythe 0.75s 4 ease-in alternate forwards;
       content: "";
       width: 60%;
       height: 100%;
@@ -399,6 +373,11 @@ import image from "/image1.png"
 
     .bubble span {
       position: relative;
+      -webkit-touch-callout:none;
+      -webkit-user-select:none;
+      -moz-user-select:none;
+      -ms-user-select:none;
+      user-select:none;
     }
 
     @keyframes spin {
@@ -418,10 +397,11 @@ import image from "/image1.png"
       10%,
       90% {
         color: #000;
-        padding: 1%;
+        background-color: rgba(255, 255, 255, 0.6);
+        border-radius: 10px;
       }
     }
-    
+
     @keyframes showruletext {
       0%,
       100% {
@@ -429,12 +409,27 @@ import image from "/image1.png"
       }
       10%,
       90% {
+        color: #fff;
+        background-color: rgba(0,0,0,0.6);
+        border-radius: 18px;
+        margin-bottom: 4%;
+      }
+    }
+
+    @keyframes showroundtext {
+      0%,
+      100% {
+        color: #0000;
+      }
+      10%,
+      90% {
         color: #000;
+        border-radius: 10px;
       }
     }
 
     .sigh {
-      animation: showsightext 5s 11s linear forwards;
+      animation: showsightext 5s 11s linear forwards ;
       font-size: 2vmin;
       width: 40%;
       left: 57%;
@@ -442,6 +437,11 @@ import image from "/image1.png"
       text-align: center;
       font-size: xx-large;
       color: #0000;
+      -webkit-touch-callout:none;
+      -webkit-user-select:none;
+      -moz-user-select:none;
+      -ms-user-select:none;
+      user-select:none;
     }
 
     @keyframes showsigh {
@@ -452,6 +452,7 @@ import image from "/image1.png"
       25%,
       75% {
         color: #0008;
+        font-size: 1.5rem;
       }
     }
 
@@ -468,12 +469,18 @@ import image from "/image1.png"
     .rules {
       animation: showruletext 15s 21s linear forwards;
       font-size: 2vmin;
-      width: 40%;
+      width: 35%;
       left: 57%;
       top: 30%;
-      text-align: left;
-      font-size: xx-large;
+      height: 50%;
+      font-size: x-large;
       color: #0000;
+      -webkit-touch-callout:none;
+      -webkit-user-select:none;
+      -moz-user-select:none;
+      -ms-user-select:none;
+      user-select:none;
+      font-family: 'Poppins', sans-serif;
     }
 
     .rules::before {
@@ -486,28 +493,39 @@ import image from "/image1.png"
       color: #0000;
     }
 
+    .rules span {
+      width: 100%;
+      text-align: center;
+      font-weight: bold;
+      font-size: 2rem;
+      text-decoration: underline;
+    }
     .round {
-      animation: showsightext 60s 44s linear forwards;
+      animation: showroundtext 60s 41s linear forwards;
       font-size: 2vmin;
-      width: 40%;
+      width: 30%;
       left: 57%;
       top: 30%;
-      text-align: left;
       font-size: xx-large;
       color: #0000;
+      -webkit-touch-callout:none;
+      -webkit-user-select:none;
+      -moz-user-select:none;
+      -ms-user-select:none;
+      user-select:none;
     }
 
     a {
       animation: showlinktext 60s 41s linear forwards;
       padding-left: 1%;
       font-size: xx-large;
-      color: #0000;
+      color: #0000ff00;
     }
     
     @keyframes showlinktext {
       0%,
       100% {
-        color: #0000;
+        color: #0000ff3f;
       }
       10%,
       90% {
