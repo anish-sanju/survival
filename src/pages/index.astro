@@ -32,11 +32,6 @@ import image from "/image1.png"
         &nbsp;&nbsp;● All the rounds are elimination based<br />
         &nbsp;&nbsp;● Total allotted time: 3 hours<br />
       </div>
-      <div class="round">
-        Here is the link to <a href="https://quizizz.com/join?gc=10000000">
-          Round 1
-        </a>
-      </div>
     </section>
     </div>
   <style>
@@ -494,53 +489,12 @@ import image from "/image1.png"
     }
 
     .rules span {
-      width: 100%;
+      width: 80%;
       text-align: center;
       font-weight: bold;
       font-size: 2rem;
       text-decoration: underline;
     }
-    .round {
-      animation: showroundtext 60s 41s linear forwards;
-      font-size: 2vmin;
-      width: 30%;
-      left: 57%;
-      top: 30%;
-      font-size: xx-large;
-      color: #0000;
-      -webkit-touch-callout:none;
-      -webkit-user-select:none;
-      -moz-user-select:none;
-      -ms-user-select:none;
-      user-select:none;
-    }
 
-    a {
-      animation: showlinktext 60s 41s linear forwards;
-      padding-left: 1%;
-      font-size: xx-large;
-      color: #0000ff00;
-    }
-    
-    @keyframes showlinktext {
-      0%,
-      100% {
-        color: #0000ff3f;
-      }
-      10%,
-      90% {
-        color: #0000ff;
-      }
-    }
-
-    .round::before {
-      animation: showsigh 3s 36s linear forwards;
-      content: "...So lets get started...";
-      top: 0;
-      left: 0;
-      transform: translate(-30%, -130%) rotate(-10deg);
-      font-size: 0.8em;
-      color: #0000;
-    }
   </style>
 </Layout>
